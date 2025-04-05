@@ -10,6 +10,15 @@ export default {
               'primary': '#244087',
               'secondary': '#4C7562',
             },
+            FontFaceSet: {'archivo narrow': ' "Archivo Narrow", sans-serif;'},
+            fontFamily: {
+              'archivo': ['Archivo Narrow', 'sans-serif'],
+            },
+            fontSize: {
+              'xxs': '0.5rem',
+              'xxl': '1.75rem',
+              'xxxl': '2.25rem',
+            },
           },
           screens: {
             'custom': '1300px',

@@ -15,14 +15,14 @@
             royalBlue: '#244087',
           },
           fontFamily: {
-            archivo: ['Archivo Narrow', 'sans-serif'],
+            commons: ['TT Commons Pto', 'sans-serif'],
           },
         },
       },
     }
   </script>
 </head>
-<body class="font-archivo text-gray-800">
+<body class="font-normal text-gray-800">
 <!-- Header (optional) -->
   <!-- Nav or flags can go here -->
 
@@ -30,6 +30,9 @@
   <main>
       @yield('content')
     </main>
+  <!-- Add a horizontal separator -->
+  <div class="w-full h-0.5 bg-green-800"></div>
+</div>
 
     <footer class="bg-blue-950 text-white">
   <!-- Top row with 4 columns -->
@@ -62,46 +65,32 @@
 
     <!-- Column 2: BROWSE -->
     <nav aria-labelledby="browse-heading">
-      <h3 id="browse-heading" class="text-2xl font-archivo-bold text-[#FFF200] uppercase mb-4">
+      <h3 id="browse-heading" class="text-2xl font-bold text-[#FFF200] uppercase mb-4">
         Browse
       </h3>
       <ul class="space-y-3 text-lg">
-        <li>
-          <a href="#" class="hover:underline focus:ring-2 focus:ring-[#FFF200]">Home</a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline focus:ring-2 focus:ring-[#FFF200]">Über Uns</a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline focus:ring-2 focus:ring--[#FFF200]">20 Jahre CineBrasil</a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline focus:ring-2 focus:ring--[#FFF200]">Kontakt</a>
-        </li>
+        <li><a href="{{ route('home') }}" class="hover:underline focus:ring-2 focus:ring-yellow-400">Home</a></li>
+        <li><a href="{{ route('under-construction') }}" class="hover:underline focus:ring-2 focus:ring-yellow-400">Über Uns</a></li>
+        <li><a href="{{ route('under-construction') }}" class="hover:underline focus:ring-2 focus:ring-yellow-400">20 Jahre CineBrasil</a></li>
+        <li><a href="{{ route('contact-us') }}" class="hover:underline focus:ring-2 focus:ring-yellow-400">Kontakt</a></li>
       </ul>
     </nav>
 
     <!-- Column 3: RECHTLICHES -->
     <nav aria-labelledby="legal-heading">
-      <h3 id="legal-heading" class="text-2xl font-archivo-bold text-[#FFF200] uppercase mb-4">
+      <h3 id="legal-heading" class="text-2xl font-bold text-[#FFF200] uppercase mb-4">
         Rechtliches
       </h3>
       <ul class="space-y-3 text-lg">
         <li>
-          <a href="#" class="hover:underline focus:ring-2 focus:ring-[#FFF200]">Impressum</a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline focus:ring-2 focus:ring-[#FFF200]">Datenschutz</a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline focus:ring-2 focus:ring-[#FFF200]">AGB</a>
+          <a href="{{ route('impressum') }}" class="hover:underline focus:ring-2 focus:ring-[#FFF200]">Impressum</a>
         </li>
       </ul>
     </nav>
 
     <!-- Kontakt Column -->
 <address class="not-italic" aria-label="Kontakt">
-  <h3 class="text-2xl font-archivo-bold text-[#FFF200] uppercase mb-4">Kontakt</h3>
+  <h3 class="text-2xl font-bold text-[#FFF200] uppercase mb-4">Kontakt</h3>
 
   <!-- Email Row -->
   <div class="flex gap-2 items-center mb-4">
@@ -148,19 +137,15 @@
   </div>
 </address>
 
-   <!-- Bottom Bar:  Copyright -->
-<div class="bg-gray-800 text-white py-4 justify-center center-flex">
-  <div class="max-w-[1440px] p-4 flex gap-2 items-center mb-4">
-    <div style="text-align: center; display: block; width: 100%; max-width: 1440px; margin: 0 auto;">
-    <p>
-    © 2025 CineBrasil. Alle Rechte vorbehalten.
-    </p>
-  </div>
-</div>
+<!-- Bottom Bar:  Copyright -->
 </footer>
 <!-- Livewire Scripts -->
 @livewireScripts
-</main>
+<footer class="bg-gray-800 fixed bottom-0 left-0 right-0">
+  <p class="text-center px-4 py-2 text-white">
+    © 2025 CineBrasil. Alle Rechte vorbehalten.
+  </p>
+</footer>
 <!-- Optional: Include Alpine.js for interactivity -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 <script src="https://cdn.tailwindcss.com"></script>

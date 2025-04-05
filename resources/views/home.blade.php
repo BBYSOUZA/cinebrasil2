@@ -4,9 +4,8 @@
 @section('content')
   <!-- HERO SECTION -->
   <livewire:header />
-  class="bg-blue-950 text-white text-left py-12 px-6 md:px-12 lg:px-20"
->
-  <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start gap-8">
+  <div class="bg-gradient-to-t from-blue-950 to-blue-900 p-6">
+  <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start gap-8 py-6">
     <!-- Column 1: YouTube Embed (on top for mobile, left on desktop) -->
     <div class="w-full md:w-1/2 order-1 md:order-2">
       <div class="flex w-full h-auto pb-[56.25%] relative">
@@ -24,14 +23,14 @@
 
     <!-- Column 2: Film Details (below embed on mobile, right on desktop) -->
     <div class="text-left w-full md:w-1/2 order-2 md:order-1 space-y-3">
-      <h2 class="text-left text-2xl uppercase tracking-wider font-archivo-bold leading-5">
+      <h2 class="text-white text-2xl uppercase tracking-wider font-semibold leading-5">
         &mdash; DEMNÄCHST IM APRIL &mdash;
       </h2>
-      <h3 class="text-left text-3xl md:text-4xl font-bold leading-5">
+      <h3 class="text-white text-3xl md:text-4xl font-black leading-5">
         O PALHAÇO (Der Clown) 
         <br>Dir. Selton Mello (2011)
       </h3>
-      <p class="text-left text-lg leading-6">
+      <p class="text-white text-lg leading-5 font-medium">
         Auf der Bühne Lachen und Applaus. Hinter den Kulissen Zweifel und
         Unsicherheit. Der Clown, inszeniert und gespielt von Selton Mello,
         erzählt die Geschichte von Benjamin, einem Zirkusclown, der seine Berufung
@@ -39,22 +38,29 @@
         Leben muss er eine Entscheidung treffen. Ein bewegender, poetischer Film über
         Kunst und Identität.
       </p>
-      <p class="text-left font-archivo-bold text-xl leading-6">
-        Vorführung: 11.04. um 19:00 <br />
-        Babylon: Rosa-Luxemburg-Straße 30 <br />
-        10178 Berlin
+      <p class="text-white font-bold text-2xl leading-8">
+        17.04. um 19:00 <br/>
+        <span class="text-white font-bold text-2xl">Babylon Mitte</span> <span class="text-white font-bold text-lg leading-2">(Rosa-Luxemburg-Straße 10178 Berlin)</span>
       </p>
       <!-- Tickets Button -->
       <a
-        href="#"
-        class="inline-block bg-[#FFF200] text-royalBlue px-7 py-3 font-black color-royalBlue
-               hover:bg-[#FFD900] transition-colors text-lg leading-6"
-      >
-        TICKETS
-      </a>
+      href="https://babylonberlin.eu/film/8434-cinebrasil-o-palha-o"
+      class="inline-block bg-[#FFF200] text-[#1D3470] px-7 py-3 text-xl font-extrabold shadow-xl hover:bg-[#FFD900] transition-colors text-xl leading-6"
+    >
+      TICKETS 
+      <img 
+        src="/assets/arrow.svg" 
+        alt="Arrow icon"
+        class="inline-block w-6 h-6 ml-2"
+      />
+    </a>
+
     </div>
   </div>
 </section>
+</div>
+
+  <!-- Statistics Section -->
   </body>
   <!doctype html>
 <html lang="de">
@@ -85,9 +91,9 @@
           <div
             class="flex flex-col justify-center items-center p-5 text-center rounded-full border-4 border-[#346750] h-[200px] w-[200px]"
           >
-            <p class="text-lg font-medium text-[#346750]">MEHR ALS</p>
+            <p class="text-lg font-semibold text-[#346750]">MEHR ALS</p>
             <p class="text-5xl font-bold leading-none text-[#346750]">55.000</p>
-            <p class="text-lg font-medium text-[#346750]">
+            <p class="text-lg font-semibold text-[#346750]">
               BESUCHER*INNEN SEIT 2005
             </p>
           </div>
@@ -101,7 +107,7 @@
             <p class="mb-2.5 text-5xl font-bold leading-none text-[#346750]">
               197
             </p>
-            <p class="text-lg font-medium text-[#346750]">
+            <p class="text-lg font-semibold text-[#346750]">
               FILME INSGESAMT VORGEFÜRHT
             </p>
           </div>
@@ -115,7 +121,7 @@
             <p class="mb-2.5 text-5xl font-bold leading-none text-[#346750]">
               20
             </p>
-            <p class="text-base font-medium text-[#346750]">
+            <p class="text-base font-semibold text-[#346750]">
               STÄDTE IN DEUTSCHLAND, ÖSTERREICH UND DER SCHWEIZ
             </p>
           </div>
@@ -129,7 +135,7 @@
             <p class="mb-4 text-5xl font-bold leading-none text-[#346750]">
               20
             </p>
-            <p class="text-base font-medium text-[#346750]">
+            <p class="text-base font-semibold text-[#346750]">
               JAHRE BRASILIANISCHE FILLMKUNST IN EUROPA
             </p>
           </div>
@@ -145,24 +151,24 @@
     class="flex flex-col gap-3 items-center px-0 py-16 w-full bg-[#0F2770] max-sm:px-5 max-sm:py-10"
   >
     <div
-      class="flex relative flex-col items-center h-[317px] w-[821px] max-md:h-auto max-md:w-[90%]"
+      class="flex relative flex-col items-center h-[317px] max-md:h-auto max-md:w-[90%]"
     >
       <div
-        class="mb-3 text-5xl font-bold text-center text-neutral-100 max-md:text-4xl max-sm:text-3xl"
+        class="mb-3 text-5xl font-bold text-center text-cineYellow max-md:text-4xl max-sm:text-3xl"
       >
-        Werden Sie Sponsor!
+      Fördern Sie CineBrasil!
       </div>
       <div
-        class="mb-5 text-xl font-medium text-center max-w-[821px] text-neutral-100 max-md:text-lg max-sm:text-base"
+        class="mb-3 text-md font-medium text-neutral-100 text-center"
       >
-        Möchten Sie CineBrasil unterstützen? Ob als Sponsor*in oder Spender*in –
-        für jede*n gibt es eine Möglichkeit zu helfen
+      Wir sind stets auf der Suche nach verlässlichen Partnern, die unsere Vision eines lebendigen, interkulturellen Filmfestivals unterstützen möchten.<br>
+      Ganz gleich, ob Sie als Hauptsponsor oder als projektbezogener Förderer einsteigen wollen – wir finden das passende Paket.
       </div>
       <div
-        class="mb-4 text-sm font-bold text-center uppercase max-w-[536px] text-neutral-100 max-sm:text-xs"
+        class="mb-4 text-xl font-bold text-center uppercase text-neutral-100 max-sm:text-xs"
       >
-        INTERESSE GEWECKT? DANN SCHICKEN SIE UNS EINE MAIL UND WIR LASSEN IHNEN
-        UNSERE BROSCHÜRE GERNE ZUKOMMEN.
+        INTERESSE GEWECKT? DANN SCHICKEN SIE UNS DOCH EINE MAIL UND<br>
+        WIR LASSEN IHNEN UNSERE BROSCHÜRE GERNE ZUKOMMEN.
       </div>
       <div>
         <div>
@@ -175,7 +181,6 @@
             xmlns="http://www.w3.org/2000/svg"
             class="email-input"
             style="width: 540px; height: 48px; margin-bottom: 12px"
-            @livewire:('subscribe-form')
           >
            <tspan x="23" y="29">E-Mail Adresse </tspan>
         </text>
@@ -208,10 +213,10 @@
             <a
                   href="#"
                   class="inline-block text-white bg-[#2C694D] px-3 py-3 font-extrabold color-[00000]
-                        hover:bg-[568422] transition-colors text-lg leading-6 text-black items-center"
+                        hover:bg-[568422] transition-colors text-lg leading-5 text-black items-center"
                   style="text-align: center; display: block; width: 100%; max-width: 300px; margin: 0 auto;"
                   aria-label="Broschüre"
-              >   Broschüre anfragen
+              >   BROSCHÜRE ANFRAGEN
             </a>
               
             </div>
@@ -286,7 +291,7 @@
                hover:bg-[#2C694D] transition-colors text-lg leading-6 items-center"
         style="text-align: center; display: block; width: 100%; max-width: 300px; margin: 0 auto;"
         aria-label="Archive"
-    >   Zum Archiv
+    >   ZUM ARCHIV
     </a>
     </div>
 @livewireScripts
