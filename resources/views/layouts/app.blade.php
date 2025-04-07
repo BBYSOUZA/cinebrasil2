@@ -34,117 +34,66 @@
   <div class="w-full h-0.5 bg-green-800"></div>
 </div>
 
-    <footer class="bg-blue-950 text-white">
-  <!-- Top row with 4 columns -->
-  <div class="max-w-full mx-auto px-40 py-10 grid gap-8 
-              md:grid-cols-4   <!-- 4 columns at md breakpoint (1380px) -->
-              grid-cols-1">    <!-- 1 column below 768px -->
-
-    <!-- Column 1: Brand + Text -->
+<footer class="bg-blue-950 text-white">
+  <!-- Top Footer Content: Four Separate Columns -->
+  <div class="w-full h-80 px-40 py-20 grid grid-cols-1 lg:grid-cols-4 gap-6 flex justify-evenly">
+    <!-- Column 1: Company Info -->
     <div>
-      <!-- Brand (Logo or text) -->
-      <img 
-        src="/assets/VARIACOES 2.svg" 
-        alt="CineBrasil Logo" 
-        class="w-auto h-auto mb-4"
-        aria-label="CineBrasil Logo" 
-      />
-      <!-- Description text -->
-      <nav class="flex gap-8 items-center" aria-label="Social media">
+      <img src="/assets/CINEBRASIL_LOGO.png" alt="CineBrasil Logo" class="w-80 h-auto mb-2" />
+      <!-- Social Media Icons -->
+      <nav class="flex gap-4 justify-start mt-4" aria-label="Socials">
         <a href="#" class="hover:text-gray-300">
           <img src="/assets/Facbook.svg" alt="Facebook" class="w-10 h-10" />
         </a>
         <a href="#" class="hover:text-gray-300">
           <img src="/assets/Instagram.svg" alt="Instagram" class="w-10 h-10" />
         </a>
-        <a href="#" class="hover:text-gray-300">
-          <img src="/assets/Youtube.svg" alt="YouTube" class="w-10 h-10" />
-        </a>
       </nav>
     </div>
 
-    <!-- Column 2: BROWSE -->
-    <nav aria-labelledby="browse-heading">
-      <h3 id="browse-heading" class="text-2xl font-bold text-[#FFF200] uppercase mb-4">
-        Browse
-      </h3>
-      <ul class="space-y-3 text-lg">
-        <li><a href="{{ route('home') }}" class="hover:underline focus:ring-2 focus:ring-yellow-400">Home</a></li>
-        <li><a href="{{ route('under-construction') }}" class="hover:underline focus:ring-2 focus:ring-yellow-400">Über Uns</a></li>
-        <li><a href="{{ route('under-construction') }}" class="hover:underline focus:ring-2 focus:ring-yellow-400">20 Jahre CineBrasil</a></li>
-        <li><a href="{{ route('contact-us') }}" class="hover:underline focus:ring-2 focus:ring-yellow-400">Kontakt</a></li>
+    <!-- Column 2: Browse -->
+    <div>
+      <h3 class="text-2xl font-bold text-cineYellow uppercase mb-2">Browse</h3>
+      <ul class="space-y-1 text-lg">
+        <li><a href="{{ route('home') }}" class="hover:underline hover:text-cineYellow">Home</a></li>
+        <li><a href="{{ route('under-construction') }}" class="hover:underline hover:text-cineYellow">Über Uns</a></li>
+        <li><a href="{{ route('under-construction') }}" class="hover:underline hover:text-cineYellow">20 Jahre CineBrasil</a></li>
+        <li><a href="{{ route('contact-us') }}" class="hover:underline hover:text-cineYellow">Kontakt</a></li>
       </ul>
-    </nav>
+    </div>
 
-    <!-- Column 3: RECHTLICHES -->
-    <nav aria-labelledby="legal-heading">
-      <h3 id="legal-heading" class="text-2xl font-bold text-[#FFF200] uppercase mb-4">
-        Rechtliches
-      </h3>
-      <ul class="space-y-3 text-lg">
-        <li>
-          <a href="{{ route('impressum') }}" class="hover:underline focus:ring-2 focus:ring-[#FFF200]">Impressum</a>
-        </li>
+    <!-- Column 3: Rechtliches -->
+    <div>
+      <h3 class="text-2xl font-bold text-cineYellow uppercase mb-2">Rechtliches</h3>
+      <ul class="space-y-1 text-lg">
+        <li><a href="{{ route('impressum') }}" class="hover:underline hover:text-cineYellow">Impressum</a></li>
       </ul>
-    </nav>
+    </div>
 
-    <!-- Kontakt Column -->
-<address class="not-italic" aria-label="Kontakt">
-  <h3 class="text-2xl font-bold text-[#FFF200] uppercase mb-4">Kontakt</h3>
-
-  <!-- Email Row -->
-  <div class="flex gap-2 items-center mb-4">
-    <!-- Optional icon for email, remove if you don't want one -->
-    <img 
-      src="/assets/mail.svg" 
-      alt="" 
-      class="w-6 h-auto" 
-      aria-hidden="true"
-    />
-    <a 
-      href="mailto:info@cinemanegro.de"
-      class="hover:underline focus:ring-2 focus:ring-cineYellow text-lg"
-    >
-      info@cinemanegro.de
-    </a>
+    <!-- Column 4: Kontakt -->
+    <div>
+      <h3 class="text-2xl font-bold text-cineYellow uppercase mb-2">Kontakt</h3>
+      <p class="text-lg mb-1">
+        E-Mail: <a href="mailto:info@cinemanegro.de" class="underline hover:text-cineYellow">info@cinemanegro.de</a>
+      </p>
+      <p class="text-lg mb-1">
+        Tel: <a href="tel:+4901625430335" class="hover:underline hover:text-cineYellow">+49 (0) 162 5430335</a>
+      </p>
+      <p class="text-lg">
+        <a href="https://www.google.com/maps/place/Cinebrasil/@52.5372782,13.4127452,17z/data=!3m1!4b1!4m6!3m5!1s0x47a851fe72e509d5:0xc881df3999d6e1f9!8m2!3d52.5372782!4d13.4127452!16s%2Fg%2F11y46t0wrq?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" class="hover:underline hover:text-cineYellow">Schönhauser Allee 32, 10435 Berlin</a>
+      </p>
+    </div>
   </div>
 
-  <!-- Phone Row -->
-  <div class="flex gap-2 items-center mb-4">
-    <img
-      src="/assets/phone.svg"
-      alt=""
-      class="w-6 h-auto"
-      aria-hidden="true"
-    />
-    <a
-      href="tel:+4901625430335"
-      class="hover:underline focus:ring-2 focus:ring-cineYellow text-lg"
-    >
-      +49 (0)162 5430335
-    </a>
+  <!-- Bottom Footer: Full-Width Anchored Bar -->
+  <div class="bg-gray-800 w-full">
+    <div class="w-full px-20 py-3">
+      <p class="text-center text-lg font-light">
+        © 2025 CineBrasil. Alle Rechte vorbehalten.<br>
+        <span class="text xxs font-light"</span>Developed by Laís Takano.<a href="{{ route('impressum') }}"
+      </p>
+    </div>
   </div>
-
-  <!-- Location Row -->
-  <div class="flex gap-2 items-center text-lg">
-    <img
-      src="/assets/location.svg"
-      alt=""
-      class="w-6 h-auto"
-      aria-hidden="true"
-    />
-    <p>Schönhauser Allee 32, 10435 Berlin</p>
-  </div>
-</address>
-
-<!-- Bottom Bar:  Copyright -->
-</footer>
-<!-- Livewire Scripts -->
-@livewireScripts
-<footer class="bg-gray-800 fixed bottom-0 left-0 right-0">
-  <p class="text-center px-4 py-2 text-white">
-    © 2025 CineBrasil. Alle Rechte vorbehalten.
-  </p>
 </footer>
 <!-- Optional: Include Alpine.js for interactivity -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>

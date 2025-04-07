@@ -3,7 +3,7 @@
 @section('content')
 <livewire:header />
 
-<section class="bg-blue-950 text-white text-centerpy-12 py-8 md:px-20">
+<section class="bg-blue-950 text-white text-centerpy-12 py-8 px-20">
   <div class="max-w-[1440px] h-full mx-auto">
     <h1 class="text-3xl font-bold text-cineYellow mb-6 flex-col items-center justify-center"">Kontakt</h1>
       <p class="mb-2">

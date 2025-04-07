@@ -3,10 +3,14 @@
 @livewireStyles
 @section('content')
   <!-- HERO SECTION -->
-  <livewire:header />
+<livewire:header />
+<section class="bg-blue-950 py-10 px-6 md:px-16 w-full z-10">
   <div class="bg-gradient-to-t from-blue-950 to-blue-900 p-6">
-  <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start gap-8 py-6">
-    <!-- Column 1: YouTube Embed (on top for mobile, left on desktop) -->
+  <div class="w-full flex flex-col md:flex-row items-start py-6">
+  <section
+      class="w-full flex flex-col md:flex-row items-start gap-8 py-12"
+      aria-labelledby="festival-stats-title">
+  <!-- Column 1: YouTube Embed (on top for mobile, left on desktop) -->
     <div class="w-full md:w-1/2 order-1 md:order-2">
       <div class="flex w-full h-auto pb-[56.25%] relative">
         <iframe
@@ -14,7 +18,7 @@
           src="https://www.youtube.com/embed/56P0KCQnRhE?si=nOvoU6HdUmXfeSeQ"
           title="YouTube video player"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture/> web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
@@ -23,14 +27,19 @@
 
     <!-- Column 2: Film Details (below embed on mobile, right on desktop) -->
     <div class="text-left w-full md:w-1/2 order-2 md:order-1 space-y-3">
-      <h2 class="text-white text-2xl uppercase tracking-wider font-semibold leading-5">
+    <h2 class="font-bold text-white text-right rtl:text-left text-2xl uppercase tracking-wider font-semibold leading-5">
         &mdash; DEMNÄCHST IM APRIL &mdash;
       </h2>
-      <h3 class="text-white text-3xl md:text-4xl font-black leading-5">
-        O PALHAÇO (Der Clown) 
-        <br>Dir. Selton Mello (2011)
-      </h3>
-      <p class="text-white text-lg leading-5 font-medium">
+      <h1 class="text-white text-6xl font-bold leading-30 text-right rtl:text-left ">
+        O Palhaço (2011) <br>
+        - "Der Clown"
+      </h1> 
+     <p class="text-white text-2xl font-bold leading-8 text-right rtl:text-left ">
+        Regie: Selton Mello</p>
+      <p class="text-white text-2xl font-bold leading-4 text-right rtl:text-left ">
+        Brasilien, 2011, 90 Min., OmU
+      </p>
+      <p class="text-sm text-right rtl:text-left text-gray-500 dark:text-gray-400">
         Auf der Bühne Lachen und Applaus. Hinter den Kulissen Zweifel und
         Unsicherheit. Der Clown, inszeniert und gespielt von Selton Mello,
         erzählt die Geschichte von Benjamin, einem Zirkusclown, der seine Berufung
@@ -38,15 +47,16 @@
         Leben muss er eine Entscheidung treffen. Ein bewegender, poetischer Film über
         Kunst und Identität.
       </p>
-      <p class="text-white font-bold text-2xl leading-8">
-        17.04. um 19:00 <br/>
-        <span class="text-white font-bold text-2xl">Babylon Mitte</span> <span class="text-white font-bold text-lg leading-2">(Rosa-Luxemburg-Straße 10178 Berlin)</span>
+      <p class="text-white font-bold text-2xl leading-8 px-10">
+        17.04. um 19:00 <br>
+        <span>Babylon Mitte<br> <span/><span class="text-white font-bold text-lg leading-2">(Rosa-Luxemburg-Straße 10178 Berlin)</span>
       </p>
       <!-- Tickets Button -->
       <a
       href="https://babylonberlin.eu/film/8434-cinebrasil-o-palha-o"
       class="inline-block bg-[#FFF200] text-[#1D3470] px-7 py-3 text-xl font-extrabold shadow-xl hover:bg-[#FFD900] transition-colors text-xl leading-6"
-    >
+      style="text-align: center; display: block; width: 100%; max-width: 300px; margin: 0 auto;"
+      aria-label="Tickets"
       TICKETS 
       <img 
         src="/assets/arrow.svg" 
@@ -54,9 +64,8 @@
         class="inline-block w-6 h-6 ml-2"
       />
     </a>
-
     </div>
-  </div>
+    </div>
 </section>
 </div>
 
@@ -66,18 +75,18 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="w=full" />
     <title>CINEBRASIL Statistics Section</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <section
-      class="flex flex-col items-center px-20 py-12 w-full bg-neutral-100 max-md:px-10 max-md:py-8 max-sm:p-7"
+  <section
+      class="w-full flex flex-col items-center py-12 w-full bg-neutral-100"
       aria-labelledby="festival-stats-title"
     >
       <h2
         id="festival-stats-title"
-        class="mb-10 text-5xl font-bold text-center text-[#346750] max-md:text-4xl max-sm:text-3xl"
+        class="w-full mb-10 text-5xl font-bold text-center text-[#346750] max-md:text-4xl max-sm:text-3xl"
       >
         CINEBRASIL – Das größte brasilianische Filmfestival in Deutschland
       </h2>
@@ -148,7 +157,7 @@
 <div>
   
   <div
-    class="flex flex-col gap-3 items-center px-0 py-16 w-full bg-[#0F2770] max-sm:px-5 max-sm:py-10"
+    class="w=full flex-col items-center px-0 py-16 bg-[#0F2770]"
   >
     <div
       class="flex relative flex-col items-center h-[317px] max-md:h-auto max-md:w-[90%]"
@@ -185,15 +194,6 @@
            <tspan x="23" y="29">E-Mail Adresse </tspan>
         </text>
         <path d="M540 0H0V47.9665H540V0Z" fill="#F7F7F7"></path> 
-        <text
-              fill="#D9D9D9"
-              xml:space="preserve"
-              style="white-space: pre"
-              font-family="Archivo Narrow"
-              font-size="14"
-              font-weight="bold"
-              letter-spacing="0em"
-            >
         </div>
       </div>
       <div>
@@ -227,40 +227,33 @@
   </div>
 </div>
 
-  <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Archive Section</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
+  <!-- ARCHIVE SECTION -->
+  <div class="w-full h-0.5 bg-neutral-100"></div>
     <section
       class="archive-section flex overflow-hidden flex-col pt-10 mx-20 max-md:mx-5"
       aria-labelledby="archive-heading"
     >
-      <h2
-        id="archive-heading"
-        class="z-10 self-center -mt-3.5 text-4xl font-bold text-green-700"
-      >
-        – ARCHIV –
-      </h2>
-      <div class="mt-10 w-full max-md:max-w-full" id="archive-grid" space="30">
-        <div class="flex gap-5 max-md:flex-col">
-          <article class="w-[33%] max-md:ml-0 max-md:w-full">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/342813dceae47cf350c680c31aaea9ebaaeb2bbf?placeholderIfAbsent=true&apiKey=938de3edbdce4665870d0f9899de8cc3"
-              alt="Archive item 1"
-              class="object-contain overflow-hidden grow w-full aspect-square max-md:mt-8"
-            />
-          </article>
-          <article class="ml-5 w-[33%] max-md:ml-0 max-md:w-full">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/32964c024cbfac1a8b5f3a316842239301415d1c?placeholderIfAbsent=true&apiKey=938de3edbdce4665870d0f9899de8cc3"
-              alt="Archive item 2"
-              class="object-contain overflow-hidden grow w-full aspect-square max-md:mt-8"
-            />
+    <h2
+      id="archive-heading"
+      class="z-10 self-center -mt-3.5 mb-4 text-4xl font-bold text-green-700"
+    >
+      – ARCHIV –
+    </h2>
+    <div class="w-full" id="archive-grid" space="30">
+      <div class="flex gap-5 max-md:flex-col">
+        <article class="w-[33%] max-md:ml-0">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/342813dceae47cf350c680c31aaea9ebaaeb2bbf?placeholderIfAbsent=true&apiKey=938de3edbdce4665870d0f9899de8cc3"
+            alt="Archive item 1"
+            class="object-contain overflow-hidden grow w-full aspect-square max-md:mt-8"
+          />
+        </article>
+        <article class="ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/32964c024cbfac1a8b5f3a316842239301415d1c?placeholderIfAbsent=true&apiKey=938de3edbdce4665870d0f9899de8cc3"
+            alt="Archive item 2"
+            class="object-contain overflow-hidden grow w-full aspect-square max-md:mt-8"
+          />
           </article>
           <article class="ml-5 w-[33%] max-md:ml-0 max-md:w-full">
             <img
@@ -271,24 +264,15 @@
           </article>
         </div>
       </div>
-    </section>
-
-    <script>
-      (() => {
-        // Set the space attribute on the archive grid element
-        document.getElementById("archive-grid").setAttribute("space", "30");
-      })();
-    </script>
-  </body>
+    </div>
 </html>
 
   <!-- Archive access SECTION -->
   <section class="py-12">
-    <div class="max-w-full mx-auto px-6">
+    <div class="w-full mx-auto">
     <a
         href="#"
-        class="inline-block text-white bg-[#2C694D] px-7 py-3 font-extrabold
-               hover:bg-[#2C694D] transition-colors text-lg leading-6 items-center"
+        class="inline-block text-white bg-[#2C694D] px-7 py-3 font-extrabold hover:bg-[#2C694D] transition-colors text-lg leading-6 items-center"
         style="text-align: center; display: block; width: 100%; max-width: 300px; margin: 0 auto;"
         aria-label="Archive"
     >   ZUM ARCHIV
