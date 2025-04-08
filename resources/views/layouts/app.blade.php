@@ -31,7 +31,7 @@
       @yield('content')
     </main>
   <!-- Add a horizontal separator -->
-  <div class="w-full h-0.5 bg-green-800"></div>
+  <div class="w-full h-0.5 bg-gray-800"></div>
 </div>
 
 <footer class="bg-blue-950 text-white">

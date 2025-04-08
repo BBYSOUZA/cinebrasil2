@@ -2,92 +2,74 @@
 
 @livewireStyles
 @section('content')
-  <!-- HERO SECTION -->
 <livewire:header />
-<section class="bg-blue-950 py-10 px-6 md:px-16 w-full z-10">
-  <div class="bg-gradient-to-t from-blue-950 to-blue-900 p-6">
-  <div class="w-full flex flex-col md:flex-row items-start py-6">
-  <section
-      class="w-full flex flex-col md:flex-row items-start gap-8 py-12"
-      aria-labelledby="festival-stats-title">
-  <!-- Column 1: YouTube Embed (on top for mobile, left on desktop) -->
-    <div class="w-full md:w-1/2 order-1 md:order-2">
-      <div class="flex w-full h-auto pb-[56.25%] relative">
+  <!-- Updated HERO Section -->
+<section class="bg-gradient-to-b from-blue-950 to-blue-900 w-full z-10">
+  <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start py-6 gap-10 w-full">
+      
+    <!-- Column 1: Film Details (mobile: on top; desktop: right side) -->
+    <div class="w-full md:w-2/5 order-2 md:order-1 flex flex-col items-right rtl:items-left">
+      <h2 class="font-bold text-white text-right rtl:text-left text-lg md:text-2xl uppercase tracking-wider leading-5">
+        &mdash; DEMNÄCHST IM APRIL &mdash;
+      </h2>
+      <h1 class="text-white text-3xl md:text-6xl font-bold leading-tight text-right rtl:text-left">
+        O Palhaço (2011) <br>
+        - "Der Clown"
+      </h1>
+      <p class="text-white text-xl md:text-2xl font-bold leading-8 text-right rtl:text-left">
+        Regie: Selton Mello
+      </p>
+      <p class="text-white text-xl md:text-2xl font-bold leading-4 text-right rtl:text-left">
+        Brasilien, 2011, 90 Min., OmU
+      </p>
+      <p class="text-sm md:text-base text-right rtl:text-left text-gray-300 dark:text-gray-400">
+        Auf der Bühne Lachen und Applaus. Hinter den Kulissen Zweifel und
+        Unsicherheit. Der Clown, inszeniert und gespielt von Selton Mello,
+        erzählt die Geschichte von Benjamin, einem Zirkusclown, der seine Berufung
+        hinterfragt. Zwischen der Magie der Manege und dem Wunsch nach einem normalen
+        Leben muss er eine Entscheidung treffen. Ein bewegender, poetischer Film über Kunst und Identität.
+      </p>
+      <p class="text-white font-bold text-xl md:text-2xl leading-8 text-right rtl:text-left">
+        17.04. um 19:00 <br>
+        <span>Babylon Mitte<br></span>
+        <span class="text-white font-bold text-lg md:text-xl leading-2">
+          (Rosa-Luxemburg-Straße 10178 Berlin)
+        </span>
+      </p>
+      <!-- Tickets Button remains the same -->
+      <div class="flex flex-col items-right rtl:items left"></div>
+      <a href="https://babylonberlin.eu/film/8434-cinebrasil-o-palha-o" 
+         class="inline-block ml-auto mt-4 px-10 py-3 items-right rtl:items left bg-[#FFF200] border border-[#1D3470] rounded shadow-xl hover:bg-[#FFD900] transition-colors text-base md:text-xl font-extrabold"
+         aria-label="Tickets">
+         TICKETS
+         <img src="/assets/arrow.svg" alt="Arrow icon" class="inline-block w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ml-2"/>
+      </a>
+    </div>
+      
+    <!-- Column 2: YouTube Embed (mobile: below text; desktop: left side) -->
+    <div class="w-full md:w-3/5 order-1 md:order-2 flex flex-shrink-0">
+      <div class="relative w-full pb-[56.25%]">
         <iframe
           class="absolute top-0 left-0 w-full h-full rounded-lg"
           src="https://www.youtube.com/embed/56P0KCQnRhE?si=nOvoU6HdUmXfeSeQ"
           title="YouTube video player"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture/> web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
+      
+  </div>
 
-    <!-- Column 2: Film Details (below embed on mobile, right on desktop) -->
-    <div class="text-left w-full md:w-1/2 order-2 md:order-1 space-y-3">
-    <h2 class="font-bold text-white text-right rtl:text-left text-2xl uppercase tracking-wider font-semibold leading-5">
-        &mdash; DEMNÄCHST IM APRIL &mdash;
-      </h2>
-      <h1 class="text-white text-6xl font-bold leading-30 text-right rtl:text-left ">
-        O Palhaço (2011) <br>
-        - "Der Clown"
-      </h1> 
-     <p class="text-white text-2xl font-bold leading-8 text-right rtl:text-left ">
-        Regie: Selton Mello</p>
-      <p class="text-white text-2xl font-bold leading-4 text-right rtl:text-left ">
-        Brasilien, 2011, 90 Min., OmU
-      </p>
-      <p class="text-sm text-right rtl:text-left text-gray-500 dark:text-gray-400">
-        Auf der Bühne Lachen und Applaus. Hinter den Kulissen Zweifel und
-        Unsicherheit. Der Clown, inszeniert und gespielt von Selton Mello,
-        erzählt die Geschichte von Benjamin, einem Zirkusclown, der seine Berufung
-        hinterfragt. Zwischen der Magie der Manege und dem Wunsch nach einem normalen
-        Leben muss er eine Entscheidung treffen. Ein bewegender, poetischer Film über
-        Kunst und Identität.
-      </p>
-      <p class="text-white font-bold text-2xl leading-8 px-10">
-        17.04. um 19:00 <br>
-        <span>Babylon Mitte<br> <span/><span class="text-white font-bold text-lg leading-2">(Rosa-Luxemburg-Straße 10178 Berlin)</span>
-      </p>
-      <!-- Tickets Button -->
-      <a
-      href="https://babylonberlin.eu/film/8434-cinebrasil-o-palha-o"
-      class="inline-block bg-[#FFF200] text-[#1D3470] px-7 py-3 text-xl font-extrabold shadow-xl hover:bg-[#FFD900] transition-colors text-xl leading-6"
-      style="text-align: center; display: block; width: 100%; max-width: 300px; margin: 0 auto;"
-      aria-label="Tickets"
-      TICKETS 
-      <img 
-        src="/assets/arrow.svg" 
-        alt="Arrow icon"
-        class="inline-block w-6 h-6 ml-2"
-      />
-    </a>
-    </div>
-    </div>
-</section>
-</div>
-
-  <!-- Statistics Section -->
-  </body>
-  <!doctype html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="w=full" />
-    <title>CINEBRASIL Statistics Section</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
+    <!-- Statistics Section -->
   <section
-      class="w-full flex flex-col items-center py-12 w-full bg-neutral-100"
+      class="w-full order-2 md:order-1 flex flex-col items-center py-12 w-full bg-neutral-100"
       aria-labelledby="festival-stats-title"
     >
       <h2
         id="festival-stats-title"
-        class="w-full mb-10 text-5xl font-bold text-center text-[#346750] max-md:text-4xl max-sm:text-3xl"
-      >
+        class="flex text-center mb-10 text-5xl font-bold text-[#346750] max-md:text-4xl max-sm:text-3xl">
         CINEBRASIL – Das größte brasilianische Filmfestival in Deutschland
       </h2>
 
@@ -157,24 +139,24 @@
 <div>
   
   <div
-    class="w=full flex-col items-center px-0 py-16 bg-[#0F2770]"
+    class="w=full items-center py-16 bg-[#0F2770]"
   >
     <div
-      class="flex relative flex-col items-center h-[317px] max-md:h-auto max-md:w-[90%]"
+      class="flex flex-col items-center"
     >
       <div
-        class="mb-3 text-5xl font-bold text-center text-cineYellow max-md:text-4xl max-sm:text-3xl"
+        class="flex mb-3 text-5xl font-bold text-center text-cineYellow max-md:text-4xl max-sm:text-3xl"
       >
       Fördern Sie CineBrasil!
       </div>
       <div
-        class="mb-3 text-md font-medium text-neutral-100 text-center"
+        class="flex mb-3 text-md font-medium text-neutral-100 text-center"
       >
       Wir sind stets auf der Suche nach verlässlichen Partnern, die unsere Vision eines lebendigen, interkulturellen Filmfestivals unterstützen möchten.<br>
       Ganz gleich, ob Sie als Hauptsponsor oder als projektbezogener Förderer einsteigen wollen – wir finden das passende Paket.
       </div>
       <div
-        class="mb-4 text-xl font-bold text-center uppercase text-neutral-100 max-sm:text-xs"
+        class="flex mb-4 text-xl font-bold text-center uppercase text-neutral-100 max-sm:text-xs"
       >
         INTERESSE GEWECKT? DANN SCHICKEN SIE UNS DOCH EINE MAIL UND<br>
         WIR LASSEN IHNEN UNSERE BROSCHÜRE GERNE ZUKOMMEN.
@@ -193,8 +175,7 @@
           >
            <tspan x="23" y="29">E-Mail Adresse </tspan>
         </text>
-        <path d="M540 0H0V47.9665H540V0Z" fill="#F7F7F7"></path> 
-        </div>
+        <path d="M540 0H0V47.9665H540V0Z" fill="#F7F7F7"></path> >
       </div>
       <div>
         <div>
@@ -210,15 +191,14 @@
             style="width: 223px; height: 40px; cursor: pointer"
           >
             <div>
-            <a
-                  href="#"
-                  class="inline-block text-white bg-[#2C694D] px-3 py-3 font-extrabold color-[00000]
-                        hover:bg-[568422] transition-colors text-lg leading-5 text-black items-center"
-                  style="text-align: center; display: block; width: 100%; max-width: 300px; margin: 0 auto;"
-                  aria-label="Broschüre"
-              >   BROSCHÜRE ANFRAGEN
-            </a>
-              
+              <a
+                href="#"
+                class="flex inline-block text-white bg-[#2C694D] px-3 py-3 font-extrabold color-[00000]
+                      hover:bg-[568422] transition-colors text-lg leading-5 text-black items-center"
+                style="text-align: center; display: block; width: 100%; max-width: 300px; margin: 0 auto;"
+                aria-label="Broschüre"
+                >   BROSCHÜRE ANFRAGEN
+              </a>
             </div>
           </svg>
         </div>
@@ -228,7 +208,7 @@
 </div>
 
   <!-- ARCHIVE SECTION -->
-  <div class="w-full h-0.5 bg-neutral-100"></div>
+<div class="w-full bg-neutral-100">
     <section
       class="archive-section flex overflow-hidden flex-col pt-10 mx-20 max-md:mx-5"
       aria-labelledby="archive-heading"
@@ -265,11 +245,11 @@
         </div>
       </div>
     </div>
-</html>
+</div>
 
   <!-- Archive access SECTION -->
-  <section class="py-12">
-    <div class="w-full mx-auto">
+  <section class="py-12 bg-neutral-100">
+    <div class="w-full mx-auto bg-neutral-100 flex flex-col items-center">
     <a
         href="#"
         class="inline-block text-white bg-[#2C694D] px-7 py-3 font-extrabold hover:bg-[#2C694D] transition-colors text-lg leading-6 items-center"
@@ -278,5 +258,8 @@
     >   ZUM ARCHIV
     </a>
     </div>
+  </section>
+
+</div>
 @livewireScripts
-@endsection
+@endSection
