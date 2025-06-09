@@ -1,41 +1,11 @@
-{{-- resources/views/layouts/app.blade.php --}}
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CineBrasil</title>
-  {{-- Tailwind imported once here --}}
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cineBlue: '#0F2773',
-            cineYellow: '#FFF200',
-            royalBlue: '#244087',
-          },
-          fontFamily: {
-            commons: ['TT Commons Pto', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
-  @livewireStyles
-</head>
-<body class="font-sans text-gray-800">
-  {{-- Main Content --}}
-  <main>@yield('content')</main>
-
-  {{-- Horizontal separator before footer --}}
-  <div class="w-full h-0.5 bg-green-800"></div>
+{{-- Horizontal separator before footer --}}
+<div class="w-full h-0.5 bg-green-800"></div>
 
   {{-- 4-Column Footer --}}
+  
   <footer class="bg-blue-950 text-white pt-10 pb-6">
     <div class="max-w-[1440px] mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-8">
-      
+
       {{-- Column 1: Company Info + Short Blurb --}}
       <div class="space-y-4">
         <img src="/assets/CINEBRASIL_LOGO.png" alt="CineBrasil Logo" class="w-32 h-auto mb-2">
@@ -52,8 +22,8 @@
         </h3>
         <ul class="space-y-2 text-xs md:text-sm">
           <li><a href="{{ route('home') }}" class="hover:text-yellow-300">Home</a></li>
-          <li><a href="{{ route('about') }}" class="hover:text-yellow-300">Über Uns</a></li>
-          <li><a href="{{ route('anniversary') }}" class="hover:text-yellow-300">20 Jahre CineBrasil</a></li>
+          <li><a href="{{ route('under-construction') }}" class="hover:text-yellow-300">Über Uns</a></li>
+          <li><a href="{{ route('under-construction') }}" class="hover:text-yellow-300">20 Jahre CineBrasil</a></li>
           <li><a href="{{ route('contact-us') }}" class="hover:text-yellow-300">Kontakt</a></li>
         </ul>
       </nav>
@@ -65,8 +35,6 @@
         </h3>
         <ul class="space-y-2 text-xs md:text-sm">
           <li><a href="{{ route('impressum') }}" class="hover:text-yellow-300">Impressum</a></li>
-          <li><a href="{{ route('datenschutz') }}" class="hover:text-yellow-300">Datenschutz</a></li>
-          <li><a href="{{ route('agb') }}" class="hover:text-yellow-300">AGB</a></li>
         </ul>
       </nav>
 
@@ -93,17 +61,10 @@
 
     {{-- Bottom Bar: Copyright --}}
     <div class="bg-gray-800 mt-8">
-      <div class="max-w-[1440px] mx-auto px-6 md:px-20 py-3">
-        <p class="text-center text-xs md:text-sm text-gray-300">
-          © 2025 CineBrasil. Alle Rechte vorbehalten. <br class="md:hidden">
-          Developed by Laís Takano.
-        </p>
-      </div>
-    </div>
+  <div class="max-w-[1440px] mx-auto px-6 md:px-20 py-3">
+    <p class="text-center text-xs md:text-sm text-gray-300 mb-0">
+      © 2025 CineBrasil. Alle Rechte vorbehalten. <br class="md:hidden">
+      Developed by Laís Takano.
+    </p>
+    </div>  
   </footer>
-
-  @livewireScripts
-  {{-- Alpine.js (for the header menu) --}}
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-</body>
-</html>
