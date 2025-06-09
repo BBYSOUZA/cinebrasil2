@@ -3,7 +3,7 @@
 
   {{-- 4-Column Footer --}}
   
-  <footer class="bg-blue-950 text-white pt-10 pb-6">
+  <footer class="bg-blue-950 text-white pt-10">
     <div class="max-w-[1440px] mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-8">
 
       {{-- Column 1: Company Info + Short Blurb --}}
@@ -58,13 +58,15 @@
         </p>
       </div>
     </div>
-
+    
+    </div>
     {{-- Bottom Bar: Copyright --}}
     <div class="bg-gray-800 mt-8">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-20 py-3">
-    <p class="text-center text-xs md:text-sm text-gray-300 mb-0">
-      © 2025 CineBrasil. Alle Rechte vorbehalten. <br class="md:hidden">
-      Developed by Laís Takano.
-    </p>
-    </div>  
+      <div class="max-w-[1440px] mx-auto px-6 md:px-20 py-3">
+        <p class="text-center text-xs md:text-sm text-gray-300 mb-0">
+          © 2025 CineBrasil. Alle Rechte vorbehalten. <br class="md:hidden">
+          Developed by Laís Takano.
+        </p>
+      </div>  
+    </div> {{-- Make sure to close the bg-gray-800 div --}}
   </footer>

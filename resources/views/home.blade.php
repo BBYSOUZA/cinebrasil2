@@ -72,28 +72,42 @@
 
 
 <!-- ARCHIVE SECTION -->
+  @php
+  $archiveItems = [
+      ['src' => '/assets/2005_FESTIVAL copy 2.png', 'alt' => 'Poster 2005'],
+      ['src' => '/assets/2006_FESTIVAL copy 2.png', 'alt' => 'Poster 2006'],
+      ['src' => '/assets/2007_FESTIVAL_SEUJORGE.png', 'alt' => 'Poster 2007'],
+      // Add more items as needed
+  ];
+  @endphp
+  <!-- ARCHIVE SECTION -->
   <section class="py-12">
-    <div class="max-w-[1440px] mx-auto px-6">
-      <h2 class="text-3xl font-bold text-cineBlue mb-6">ARCHIV</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Poster 1 -->
-        <div class="bg-white rounded shadow">
-          <img src="/images/poster1.jpg" alt="Poster 1" class="w-full h-72 object-cover rounded-t">
-          <p class="p-4">Film details or year, etc.</p>
-        </div>
-        <!-- Poster 2 -->
-        <div class="bg-white rounded shadow">
-          <img src="/images/poster2.jpg" alt="Poster 2" class="w-full h-72 object-cover rounded-t">
-          <p class="p-4">Film details or year, etc.</p>
-        </div>
-        <!-- Poster 3 -->
-        <div class="bg-white rounded shadow">
-          <img src="/images/poster3.jpg" alt="Poster 3" class="w-full h-72 object-cover rounded-t">
-          <p class="p-4">Film details or year, etc.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="max-w-[1440px] mx-auto px-6 bg-cineBlue">
+      <h2 class="text-3xl font-bold text-[#FFD900] mb-6">
+        ARCHIV</h2>
+      
+      <div class="max-w-[1440px] mx-auto grid
+           grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+           gap-6 px-6 sm:px-10 md:px-20 justify-items-center">
+    @foreach($archiveItems as $item)
+      <article class="w-full">
+        <img
+          src="{{ $item['src'] }}"
+          alt="{{ $item['alt'] }}"
+          class="w-full h-auto rounded-lg shadow-md"
+        />
+        <!-- optional: a caption below -->
+        <p class="mt-2 text-center text-sm text-gray-600">{{ $item['alt'] }}</p>
+      </article>
+      @endforeach
+  </div>
+  <p class="flex justify-center md:justify-end ">
+    <span class="px-6 py-3 md:px-8 md:py-4 rounded-md flex items-center justify-center bg-[#FFF200] hover:bg-[#FFD900] transition-colors"></span>
+    <a href="{{ route('archive') }}" class=" text-[#1D3470] text-base md:text-lg font-extrabold shadow-lg"
+       aria-label="Zum Archiv">
+      ZUM ARCHIV
+    </a>
+  </p>
+</section>
   {{-- ▶ FOOTER (include partial) --}}
-  @include('partials.footer')
 @endsection
