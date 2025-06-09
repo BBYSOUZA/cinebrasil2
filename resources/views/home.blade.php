@@ -6,12 +6,6 @@
   {{-- 1) Re‐include the header (Livewire component) --}}
   <livewire:header />
 
- @extends('layouts.app')
-
-@livewireStyles
-@section('content')
-  <livewire:header />
-
   {{-- ▶ HERO (include partial) --}}
   @php
     // Example: These variables would normally come from a controller or config.
