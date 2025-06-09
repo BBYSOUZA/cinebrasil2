@@ -24,10 +24,10 @@
       {{-- Desktop Nav (>=1280px) --}}
       <nav class="hidden xl:flex space-x-8 font-bold text-white text-sm md:text-base">
         <a href="{{ route('home') }}" class="hover:text-gray-300 transition-colors">HOME</a>
-        <a href="{{ route('under-construction') }}" class="hover:text-gray-300 transition-colors">ÜBER UNS</a>
-        <a href="{{ route('under-construction') }}" class="hover:text-gray-300 transition-colors">20. CINEBRASIL</a>
-        <a href="{{ route('under-construction') }}" class="hover:text-gray-300 transition-colors">ARCHIV</a>
-        <a href="{{ route('contact-us') }}" class="hover:text-gray-300 transition-colors">KONTAKT</a>
+        <a href="{{ route('über-uns') }}" class="hover:text-gray-300 transition-colors">ÜBER UNS</a>
+        <a href="{{ route('anniversary') }}" class="hover:text-gray-300 transition-colors">20. CINEBRASIL</a>
+        <a href="{{ route('archive') }}" class="hover:text-gray-300 transition-colors">ARCHIV</a>
+        <a href="{{ route('contact') }}" class="hover:text-gray-300 transition-colors">KONTAKT</a>
       </nav>
 
       {{-- Desktop Social Icons (>=1280px) --}}
@@ -86,7 +86,7 @@
           <li><a href="{{ route('under-construction') }}" @click="open = false" class="hover:text-green-800">ÜBER UNS</a></li>
           <li><a href="{{ route('under-construction') }}" @click="open = false" class="hover:text-green-800">20. CINEBRASIL</a></li>
           <li><a href="{{ route('under-construction') }}" @click="open = false" class="hover:text-green-800">ARCHIV</a></li>
-          <li><a href="{{ route('contact-us') }}" @click="open = false" class="hover:text-green-800">KONTAKT</a></li>
+          <li><a href="{{ route('contact') }}" @click="open = false" class="hover:text-green-800">KONTAKT</a></li>
         </ul>
       </nav>
     </div>

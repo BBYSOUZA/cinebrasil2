@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Replace these with real values each month:
+        // Replace these values each month for the hero section
         $heroVideoUrl     = 'https://www.youtube.com/embed/56P0KCQnRhE?si=nOvoU6HdUmXfeSeQ';
         $heroTitle        = 'O Palhaço (2011) Trailer';
         $heroSubtitle     = '— DEMNÄCHST IM APRIL —';
@@ -19,6 +19,7 @@ class HomeController extends Controller
         $heroDateTime     = '17.04. um 19:00';
         $heroVenue        = 'Babylon Mitte';
         $heroVenueAddress = '(Rosa-Luxemburg-Straße 10178 Berlin)';
+
         $heroTicketsUrl   = 'https://babylonberlin.eu/film/8434-cinebrasil-o-palha-o';
 
         return view('home', compact(
@@ -32,7 +33,7 @@ class HomeController extends Controller
             'heroDateTime',
             'heroVenue',
             'heroVenueAddress',
-            'heroTicketsUrl'
+            'heroTicketsUrl',
         ));
     }
 }

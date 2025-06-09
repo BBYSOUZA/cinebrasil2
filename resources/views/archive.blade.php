@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<livewire:header />
+@section('content')
     <section class="archive-page">
         <div class="container">
             <h1 class="page-title">CineBrasil Archive</h1>

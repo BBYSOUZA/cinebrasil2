@@ -22,9 +22,9 @@
         </h3>
         <ul class="space-y-2 text-xs md:text-sm">
           <li><a href="{{ route('home') }}" class="hover:text-yellow-300">Home</a></li>
-          <li><a href="{{ route('under-construction') }}" class="hover:text-yellow-300">Über Uns</a></li>
-          <li><a href="{{ route('under-construction') }}" class="hover:text-yellow-300">20 Jahre CineBrasil</a></li>
-          <li><a href="{{ route('contact-us') }}" class="hover:text-yellow-300">Kontakt</a></li>
+          <li><a href="{{ route('über-uns') }}" class="hover:text-yellow-300">Über Uns</a></li>
+          <li><a href="{{ route('anniversary') }}" class="hover:text-yellow-300">20 Jahre CineBrasil</a></li>
+          <li><a href="{{ route('contact') }}" class="hover:text-yellow-300">Kontakt</a></li>
         </ul>
       </nav>
 

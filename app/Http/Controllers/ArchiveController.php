@@ -1,22 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
+ 
+ use Illuminate\Http\Request;
+ 
+ class ArchiveController extends Controller
+ {
+    /**
+     * Show a list of available archive years.
+     */
+     public function index()
+     {
+        $archives = config('archives');
+        return view('archive.index', ['archives' => $archives]);
+     }
 
-use App\Models\Archive;
-use Illuminate\Http\Request;
-
-class ArchiveController extends Controller
-{
-    // Display a list of all editions (links to each detail)
-    public function index()
+    /**
+     * Display a specific archive entry.
+     */
+    public function show(string $archive)
     {
-        $editions = Archive::orderBy('year', 'desc')->get();
-        return view('archive.index', compact('editions'));
-    }
+        $archives = config('archives');
 
-    // Display a single edition’s detail page via route‐model binding on slug
-    public function show(Archive $archive)
-    {
-        return view('archive.show', compact('archive'));
+        abort_unless(array_key_exists($archive, $archives), 404);
+
+        return view('archive.show', ['archive' => $archives[$archive]]);
     }
 }
