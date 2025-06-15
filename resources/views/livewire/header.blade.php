@@ -1,7 +1,7 @@
 {{-- resources/views/livewire/header.blade.php --}}
 <header x-data="{ open: false }" class="relative z-20 w-full">
   {{-- 1) Top Flag Bar --}}
-  <div class="bg-gray-800 px-6 md:px-20 flex justify-end py-2">
+  <div class="bg-gray-800 px-6 md:px-20 flex justify-end py-6">
     <div class="flex space-x-4">
       <a href="#" aria-label="Deutsch"><img src="/assets/ico-country-r-germany.svg" alt="German" class="w-8 h-6"></a>
       <a href="#" aria-label="Português"><img src="/assets/brazil.svg" alt="Portuguese" class="w-8 h-6"></a>
@@ -10,14 +10,15 @@
   </div>
 
   {{-- 2) Main Header Section --}}
-  <div class="bg-gradient-to-b from-gray-800 to-blue-950 text-white">
-    <div class="max-w-[1440px] mx-auto px-6 md:px-20 flex items-center justify-between h-[100px] relative">
+  <div class="bg-gradient-to-b from-gray-800 to-blue-950 text-white relative ">
+    {{-- 2.1) Horizontal Separator --}}
+    <div class="max-w-[1440px] mx-auto md:px-20 flex items-center justify-between h-[50px] relative">
       {{-- Logo --}}
-      <a href="{{ route('home') }}" aria-label="CineBrasil Home">
+      <a href="{{ route('home') }}" aria-label="CineBrasil Home"">
         <img
           src="/assets/CINEBRASIL_LOGO.png"
           alt="CineBrasil 20 Jahre"
-          class="h-10 md:h-12 lg:h-14"
+          class="h-10 md:h-12 lg:h-16 max-h-[64px] w-auto block"
         >
       </a>
 
@@ -38,8 +39,8 @@
 
       {{-- Mobile Container (<=1279px): Social Icons + Hamburger --}}
       <div class="flex items-center xl:hidden space-x-4">
-        <a href="#" class="hover:text-gray-300"><img src="/assets/Facbook.svg" alt="Facebook" class="w-6 h-6"></a>
-        <a href="#" class="hover:text-gray-300"><img src="/assets/Instagram.svg" alt="Instagram" class="w-6 h-6"></a>
+        <a href="#" class="hover:text-gray-300"><img src="/assets/Facbook.svg" alt="Facebook"></a>
+        <a href="#" class="hover:text-gray-300"><img src="/assets/Instagram.svg" alt="Instagram"></a>
         <button @click="open = !open" aria-label="Toggle menu" class="focus:outline-none">
           <img
             x-show="!open"
@@ -56,7 +57,7 @@
     </div>
 
     {{-- 3) Horizontal Separator --}}
-    <div class="h-0.5 bg-green-800"></div>
+    <div class="mt-8 h-0.5 bg-green-800"></div>
   </div>
 
   {{-- 4) Mobile Dropdown (slides in from right) --}}
